@@ -7,20 +7,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Nuevo Usuario</h1>
+        <h1 id = "titulo">Nuevo Usuario</h1>
 
-        <div></div>
+        <div className= "customInputs">
+          <CustomInput label={"Usuario"} disabled={false} type={"text"}/>
+          <CustomInput label={"Correo"} disabled={false} type={"text"}/>
+          <CustomInput label={"Contraseña"} disabled={false} type={"password"}/>
+        </div>
 
-        <CustomInput label={"Usuario"} disabled={false} type={"text"}/>
-        <CustomInput label={"Correo"} disabled={false} type={"text"}/>
-        <CustomInput label={"Contraseña"} disabled={false} type={"password"}/>
-
+        <div id= "check">
+          <CustomInput  label={"Acepto terminos  y condiciones"} disabled={false} type={"checkbox"}/>
+        </div>
         
-
-        <div>
-
-            <CustomButton texto="cancelar" disabled={true} />
-            <CustomButton texto="Aceptar" disabled={false} />
+        <div className= "btns">
+          <CustomButton texto="cancelar" disabled={false} />
+          <CustomButton id="btnAceptar" texto="Aceptar" disabled={false} />
         </div>
         
 
