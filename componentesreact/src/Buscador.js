@@ -1,7 +1,7 @@
 function Buscador({ label}) {
     return (
       <>
-        <div >
+        <div className="Buscar">
             <input
             type="text"
             placeholder={label}            

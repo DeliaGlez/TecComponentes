@@ -1,0 +1,16 @@
+.Buscar {
+    width: 100%;
+    
+    padding: 10px;
+    box-sizing: border-box; 
+  }
+  
+  .Buscar input {
+    width: 90%;
+    height: 30px;
+  }
+  
+  .Buscar button {
+    width: 8%;
+    height: 35px;
+  }
