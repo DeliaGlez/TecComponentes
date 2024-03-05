@@ -1,16 +1,16 @@
-.Buscar {
+.Search {
     width: 100%;
     
     padding: 10px;
     box-sizing: border-box; 
   }
   
-  .Buscar input {
+  .Search input {
     width: 90%;
     height: 30px;
   }
   
-  .Buscar button {
+  .Search button {
     width: 8%;
     height: 35px;
   }

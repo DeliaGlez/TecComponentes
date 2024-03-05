@@ -1,7 +1,7 @@
-function Buscador({ label}) {
+function SearchBar({ label}) {
     return (
       <>
-        <div className="Buscar">
+        <div className="Search">
             <input
             type="text"
             placeholder={label}            
@@ -13,4 +13,4 @@ function Buscador({ label}) {
   }
   
   
-  export default Buscador;
+  export default SearchBar;

@@ -21,7 +21,7 @@ h1 {
   margin: 0; 
   color: #333; 
 }
-.Cartas{
+.Cards{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

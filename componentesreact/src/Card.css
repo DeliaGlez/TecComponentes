@@ -1,4 +1,4 @@
-.carta {
+.Card {
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -11,7 +11,7 @@
     text-align: center; 
   }
   
-  .carta img {
+  .Card img {
     width: 100%; 
     max-height: 150px; 
     object-fit: cover; 
@@ -19,17 +19,17 @@
     margin-bottom: 12px;
   }
   
-  .carta h2 {
+  .Card h2 {
     font-size: 1.5em;
     margin-bottom: 8px;
   }
   
-  .carta p {
+  .Card p {
     flex-grow: 1;
     margin-bottom: 12px;
   }
   
-  .carta button {
+  .Card button {
     margin-top: auto; 
     padding: 8px 16px;
     background-color: #3498db;
@@ -40,7 +40,7 @@
     font-size: 1em;
   }
   
-  .carta button:hover {
+  .Card button:hover {
     background-color: #2077b3;
   }
   
