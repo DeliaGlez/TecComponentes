@@ -13,4 +13,6 @@
   .Search button {
     width: 8%;
     height: 35px;
+    background-color: rgb(103, 192, 147);
+    color: #fff;;
   }

@@ -1,26 +1,10 @@
 .App {
   text-align: center;
+  background-color: rgb(235, 252, 241);
 }
 
-.App-header {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  padding: 10px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
 
-.App-header img {
-  width: 45px;
-  height: 45px;
-  margin-right: 10px; 
-}
 
-h1 {
-  font-size: 2.5em;
-  margin: 0; 
-  color: #333; 
-}
 .Cards{
   display: flex;
   flex-wrap: wrap;
@@ -28,13 +12,4 @@ h1 {
 }
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
