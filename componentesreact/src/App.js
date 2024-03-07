@@ -11,6 +11,7 @@ import './CustomHeader.css'
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +19,6 @@ function App() {
         const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
         const pokemonList = response.data.results;
 
-        // Obtener detalles de cada Pokémon individualmente
         const detailedPokemonList = await Promise.all(
           pokemonList.map(async (pokemon) => {
             const detailsResponse = await axios.get(pokemon.url);
@@ -35,17 +35,26 @@ function App() {
     fetchData();
   }, []);
 
+  const pokemonIndexMap = pokemonData.reduce((acc, pokemon, index) => {
+    acc[pokemon.name] = index;
+    return acc;
+  }, {});
+
+  const filteredPokemonData = pokemonData.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="App">
       <CustomHeader title={"1ra Generación"} src={"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"} />
-      <SearchBar label={"Nombre del Pokémon"} />
+      <SearchBar label={"Nombre del Pokémon"} setSearchTerm={setSearchTerm} />
       <div className="Cards">
-        {pokemonData.map((pokemon, index) => (
+        {filteredPokemonData.map((pokemon) => (
           <Card
-            key={index}
-            url={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`}
+            key={pokemonIndexMap[pokemon.name]}
+            url={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndexMap[pokemon.name] + 1}.png`}
             title={pokemon.name}
-            description={`#${index + 1}`}  
+            description={`#${pokemonIndexMap[pokemon.name] + 1}`}
             details={
               <>
                 <div>{`Tipo: ${pokemon.types.map(type => type.type.name).join(', ')}`}</div>
